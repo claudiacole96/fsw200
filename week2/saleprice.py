@@ -10,10 +10,10 @@ twentyFiveOff = .25
 tax = .065
 
 def finalItemPrice():
-    if itemPrice > 19.99:
-        return itemPrice * (1 - fifteenOff)
-    elif itemPrice > 39.99:
+    if itemPrice > 39.99:
         return itemPrice * (1 - twentyFiveOff)
+    elif itemPrice > 19.99:
+        return itemPrice * (1 - fifteenOff)
     else:
         return itemPrice
 
@@ -28,7 +28,7 @@ def savedAmount():
 
 print("Your Receipt")
 print("---------------------------")
-print(f"{itemQnt} {itemDescrip} priced at {finalItemPrice():,.2f}")
-print(f"Sales tax {salesTax():,.2f}")
-print(f"Total amount due: {totalPrice():,.2f}")
-print(f"You saved {savedAmount():,.2f}")
+print(f"{itemQnt} {itemDescrip} priced at ${finalItemPrice():,.2f}")
+print(f"Sales tax: ${salesTax():,.2f}")
+print(f"Total amount due: ${totalPrice():,.2f}")
+print(f"You saved ${savedAmount():,.2f}")

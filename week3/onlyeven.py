@@ -1,12 +1,12 @@
-userActive = True 
+invalidMsg = "Invalid Input... Not a positive number."
 
-while userActive: 
-    numberInput = (input("Please enter an even number: "))
+while True: 
+    numberInput = (input("Please enter a positive number: "))
     if numberInput.isnumeric():
-        if int(numberInput) % 2 == 0:
+        if int(numberInput) > 0:
             for x in range(0, (int(numberInput)+1), 2):
                 print(x)
         else:
-            print("Invalid Input... ")
+            print(invalidMsg)
     else:
-        print("Invalid Input... ")
+        print(invalidMsg)
